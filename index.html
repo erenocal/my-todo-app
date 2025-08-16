@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>✨ Todo App</h1>
+            <p>Stay organized, one task at a time</p>
+        </header>
+
+        <main class="todo-main">
+            <form class="todo-form" id="todoForm">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="What needs to be done?"
+                        maxlength="100"
+                        required
+                    >
+                    <button type="submit" class="add-btn">
+                        <span class="add-icon">+</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="todo-stats">
+                <span class="stats-text">
+                    <span id="completedCount">0</span> of <span id="totalCount">0</span> completed
+                </span>
+                <button class="clear-completed" id="clearCompleted" style="display: none;">
+                    Clear completed
+                </button>
+            </div>
+
+            <ul class="todo-list" id="todoList">
+                <!-- Todo items will be dynamically added here -->
+            </ul>
+
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">📝</div>
+                <p>No tasks yet. Add your first todo above!</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
